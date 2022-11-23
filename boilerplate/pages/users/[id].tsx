@@ -25,7 +25,12 @@ export default function User({ user }: any) {
                 <div>{userData.last_name}</div>
                 <div>{userData.email}</div>
                 <div>
-                  <img src={userData.avatar} />
+                  <Image
+                    src={userData.avatar}
+                    alt={'avatar'}
+                    width={300}
+                    height={300}
+                  />
                 </div>
               </>
             )}
