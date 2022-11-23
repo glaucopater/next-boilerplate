@@ -51,8 +51,6 @@ export default function User({ user }: any) {
 
 // This function gets called at build time
 export async function getStaticPaths() {
-  console.log('getStaticPaths');
-
   const res = await fetch(`https://reqres.in/api/users/`);
   const users = await res.json();
 
@@ -72,7 +70,6 @@ export async function getStaticProps({ params }: { params: { id: any } }) {
   // If the route is like /users/1, then params.id is 1
   const res = await fetch(`https://reqres.in/api/users/${params.id}`);
   const user = await res.json();
-  console.log('getStaticProps', params, user);
 
   // Pass user data to the page via props
   return { props: { user } };
