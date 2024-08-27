@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1024px;
 }
 
 .card {
@@ -83,13 +83,16 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  width: 230px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #fff;
+  border-color: #3df300;
 }
 
 .card h2 {
@@ -101,6 +104,10 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+.cardImage {
+  object-fit: cover;
 }
 
 .logo {
@@ -116,13 +123,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
